@@ -54,6 +54,9 @@ form.addEventListener('submit', event => {
   event.preventDefault();
   const input = document.querySelector('.js-todo-input');
 
+document.addEventListener('keypress', function() {submitForm(event)}, false);
+
+  
   const text = input.value.trim();
   if (text !== '') {
     addTodo(text);
